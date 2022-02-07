@@ -3,7 +3,7 @@ param ($device, $name, $status, $down, $message, $from_email, $api_token, $servi
 #Authors: Jordan Burch:jordan@yobo.dev
 #license: MIT
 
-url = "https://api.pagerduty.com/incidents"
+$url = "https://api.pagerduty.com/incidents"
 $headers = @{
 	'Authorization' = "Token token=$api_token";
 	'Accept' = 'application/vnd.pagerduty+json;version=2';
