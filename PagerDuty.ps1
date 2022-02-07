@@ -14,4 +14,4 @@ $headers = @{
 $body ='{"incident": {"type": "incident","title":"'+$device +" "+$name +" is "+$status+'","body":{"type":"incident_body","details":"'+$message+'"},"service": {"id": "'+$service_id+'","summary": "test from PRTG","type": "service_reference","self": null,"html_url": null}}}'
 
 # Make API request, selecting JSON properties from response
-Invoke-WebRequest $url -Headers $headers -Method Post  -Body $body;
+Invoke-WebRequest -Uri $url -UseBasicParsing -Headers $headers -Method Post -ContentType 'application/json' -Body $body;
